@@ -1,0 +1,20 @@
+{
+  "name": "@cipher-chat/server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/server.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --target=node22 --packages=external --alias:@cipher-chat/shared=../shared/src/index.ts --outfile=dist/server.js"
+  },
+  "dependencies": {
+    "@cipher-chat/shared": "1.0.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15"
+  }
+}

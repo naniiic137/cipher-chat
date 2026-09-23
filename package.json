@@ -1,0 +1,28 @@
+{
+  "name": "cipher-chat",
+  "private": true,
+  "version": "1.0.0",
+  "description": "End-to-end encrypted real-time chat with a blind relay server.",
+  "author": "Hamza Ben Ismail",
+  "license": "UNLICENSED",
+  "type": "module",
+  "workspaces": ["shared", "server", "client"],
+  "engines": { "node": ">=22.12" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "start": "npm run start -w server",
+    "build": "npm run build -w server && npm run build -w client",
+    "build:demo": "npm run build:demo -w client",
+    "typecheck": "tsc -p shared --noEmit && tsc -p server --noEmit && tsc -p client --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:server": "vitest run server/test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "5.9.3",
+    "vitest": "^5.0.1"
+  }
+}
