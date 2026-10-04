@@ -8,7 +8,7 @@ ciphertext and still gates who can join, without learning the key. A built-in
 switch shows how the client catches tampered data.
 
 [![CI](https://github.com/naniiic137/cipher-chat/actions/workflows/ci.yml/badge.svg)](https://github.com/naniiic137/cipher-chat/actions/workflows/ci.yml)
-&nbsp;**Live demo (offline mode):** https://naniiic137.github.io/cipher-chat/ (open it in two tabs and chat with yourself)
+&nbsp;**Live demo (offline mode):** https://cipher-chat.pages.dev/ (open it in two tabs and chat with yourself)
 
 > Educational portfolio project, **not audited**. Read [SECURITY.md](SECURITY.md) for the
 > threat model and honest limitations before trusting it with anything important.

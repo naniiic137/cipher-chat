@@ -13,7 +13,7 @@ import {
   type RoomInvite,
 } from '../src/index.ts';
 
-const base = 'https://naniiic137.github.io/cipher-chat/';
+const base = 'https://cipher-chat.pages.dev/';
 
 function inv(over: Partial<RoomInvite> = {}): RoomInvite {
   return { rid: newRoomId(), key: newRoomSecret(), epoch: 0, mode: 'link', ...over };
