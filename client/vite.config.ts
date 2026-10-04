@@ -32,8 +32,8 @@ function csp(): Plugin {
 }
 
 export default defineConfig(({ mode }) => ({
-  // GitHub Pages serves the demo from /cipher-chat/
-  base: mode === 'demo' ? '/cipher-chat/' : '/',
+  // GitHub Pages serves the demo from /cipher-chat/; Cloudflare Pages (CF_PAGES set) from the root
+  base: mode === 'demo' && !process.env.CF_PAGES ? '/cipher-chat/' : '/',
   plugins: [react(), csp()],
   server: { port: 3402, strictPort: true },
   preview: { port: 3403, strictPort: true },
